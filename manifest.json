@@ -7,11 +7,19 @@
     "icons": {
       "48": "icons/border-48.png"
     },
-  
+    "permissions": ["downloads"],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "default_icon": "icons/border-48.png",
+      "default_title": "Download floorplanner model (.fml)"
+    },  
     "content_scripts": [
       {
-        "matches": ["*://*.funda.nl/*/#plattegrond*"],
-        "js": ["floorplanner.js"]
+        "matches": ["*://*.funda.nl/*"],
+        "js": ["content.js"]
       }
     ]
 }
