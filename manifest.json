@@ -1,0 +1,17 @@
+{
+    "description": "Download floorplanner (.fml) models from Funda.",
+    "manifest_version": 2,
+    "name": "Funda floorplanner downloader",
+    "version": "0.1",
+    "homepage_url": "https://github.com/dbeusink/FundaFloorplannerDownloader/tree/main",
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.funda.nl/*/#plattegrond*"],
+        "js": ["floorplanner.js"]
+      }
+    ]
+}
